@@ -1,0 +1,63 @@
+/* HEADER */
+
+header {
+    @include general-mixin(null, inherit);
+    clear: both;
+    @include textalign;
+    padding-top: 40px;
+    img {
+        max-width: 100%;
+        @include general-mixin(auto, null);
+        @include break(767px) {
+            margin-bottom: 100px;
+        }
+        @include break(459px) {
+            margin-bottom: 80px;
+        }
+    }
+    h1 {
+        color: $base-color;
+        @include font-size-weight(4em, 100);
+        line-height: 0;
+        @include break(959px) {
+            @include font-size-weight(3em, null);
+        }
+        @include break(767px) {
+            @include font-size-weight(2em, null);
+        }
+        &:first-child {
+            @include break(459px) {
+                @include font-size-weight(1.4em, null);
+                margin-bottom: 20px;
+            }
+        }
+    }
+    h2 {
+        color: $white-color;
+        @include font-size-weight(2.5em, 900);
+        line-height: 0;
+        margin-bottom: 70px;
+        @include break(959px) {
+            @include font-size-weight(1.5em, null);
+        }
+        @include break(767px) {
+            @include font-size-weight(1em, null);
+        }
+        @include break(459px) {
+            @include font-size-weight(1.4em, null);
+        }
+    }
+    h3 {
+        color: $grey;
+        @include font-size-weight;
+        line-height: 0;
+        margin-bottom: 50px;
+        @include break(767px) {
+            @include font-size-weight(1.5em, null);
+        }
+        @include break(459px) {
+            color: $white-color;
+            @include font-size-weight(1em, null);
+        }
+    }
+}

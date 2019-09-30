@@ -1,0 +1,60 @@
+/* NAVIGATION */
+
+figure {
+    @include general-mixin(190px, 400px);
+    background: $logo;
+    float: left;
+    display: block;
+    @include margin-padding(0, null);
+    @include break(959px) {
+        @include general-mixin(140px, inherit);
+        float: none;
+        background-position: center;
+    }
+    @include break(459px) {
+        background-size: contain;
+        @include general-mixin(100px, null);
+    }
+}
+
+nav {
+    @include general-mixin(190px, 540px);
+    float: left;
+    @include textalign(right);
+    @include break(959px) {
+        @include general-mixin(50px, inherit);
+        float: none;
+        @include textalign;
+    }
+    @include break(459px) {
+        margin-bottom: 40px !important;
+    }
+    ul {
+        list-style-type: none;
+        margin-top: 95px;
+        @include break(959px) {
+            margin-top: 0;
+        }
+        li {
+            display: inline;
+            @include font-size-weight(0.8em, null);
+            margin-right: 10px;
+            @include break(959px) {
+                @include font-size-weight(1em, null);
+                @include margin-padding(0 10px, null);
+            }
+            @include break(767px) {
+                @include font-size-weight(0.8em, null);
+                @include margin-padding(0 5px, null);
+            }
+            a {
+                color: $base-color;
+                text-decoration: none;
+                letter-spacing: -0.01em;
+                &:hover {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+/* BASIC STYLES */
+
+body {
+    font-family: $fonts;
+    @include font-size-weight(1em, null);
+    line-height: 2em;
+    background: $main-background;
+    @include margin-padding(0, null);
+}
+
+main {
+    @include general-mixin(null, 940px);
+    @include margin-padding(0 auto, 0 10px);
+    @include break(959px) {
+        @include general-mixin(null, 768px);
+    }
+    @include break(767px) {
+        @include general-mixin(null, 460px);
+    }
+    @include break(459px) {
+        @include general-mixin(null, 300px);
+    }
+}

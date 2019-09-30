@@ -1,0 +1,29 @@
+@mixin general-mixin($height:auto, $width:auto) {
+    height: $height;
+    width: $width;
+}
+
+@mixin font-size-weight($size: 2em, $weight: 400) {
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin footer-mixin($x:0) {
+    background: $footer-image 0;
+    background-position: $x*38;
+}
+
+@mixin margin-padding($marg: initial, $padd: initial) {
+    margin: $marg;
+    padding: $padd;
+}
+
+@mixin textalign($align:center) {
+    text-align: $align;
+}
+
+@mixin break($length) {
+    @media screen and (max-width: $length) {
+        @content;
+    }
+}
